@@ -1,0 +1,177 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E voting</title>
+    <link rel="stylesheet" href="style.css">
+  
+       
+   
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            font-family: Arial, sans-serif;
+            margin: 10;
+            padding: 0;
+             display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150vh; /* Adjust the height as needed */
+
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            background-color: #333;
+            padding: 15px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #fff;
+            background-color: #333;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="form">
+
+        <form id="votingForm" onsubmit="registerVote(event)">
+            <legend>
+                <h1>Voting Management System</h1>
+            </legend>
+
+            <label>FullName: </label>
+            <input type="text" name="full name" id="fullName" placeholder="Enter Your Full Name" required><br><br>
+            <label>Age:</label>
+
+<input type="number" name="Age" placeholder="Enter Your Age" required><br><br>
+
+
+<label>Date of Birth:</label>
+
+<input type="date" name="date of birth" date= required><br><br>
+
+<label>Gender: </label>
+
+<input type="radio" name="gender" class="g" value="male">Male
+
+<input type="radio" name="gender" class="g" value="female" checked>Female<br><br>
+
+<label>Email:</label>
+
+<input type="text" name="Email" placeholder="Enter Your Email" required><br><br>
+
+<label>Phone No :</label>
+
+<input type="number" name="Phone no." placeholder="Enter Your Phone No." required><br><br>
+
+
+<label>Father's Name: </label>
+
+<input type="text" name="Father's name" placeholder="Enter Your Father's Name" required><br><br>
+
+<label>Mother's Name: </label>
+
+<input type="text" name="Mother's name" placeholder="Enter Your Mother's Name" required><br><br>
+
+<label>Address:</label>
+
+<input type= "text" name= "Enter your Address" placeholder ="Enter Your Address" maxlength="100"
+required><br><br>
+
+<label>Precinct No.:</label>
+
+<input type="number" name="Enter your Precinct no." placeholder="Enter Your Precinct No." maxlength="20"
+
+required><br><br>
+
+<label>Voter's ID:</label>
+<input type="number" name="Enter your Voter's ID" placeholder="Enter Your Voter's ID" maxlength=20><br><br>
+
+<legend><h2>Cast Your vote</h2></legend>
+
+<label for="President">President:</label>
+        <select id="President" name="President" required>
+            <option value="">--Select Candidate--</option>
+            <option value="Candidate 1">Candidate 1</option>
+            <option value="Candidate 1">Candidate 2</option>
+            <option value="Candidate 1">Candidate 3</option>
+            <option value="Candidate 1">Candidate 4</option>
+            <option value="Candidate 1">Candidate 5</option>
+        </select><br><br>
+<label for="Vice President">Vice President:</label>
+        <select id="Vice President" name="Vice President" required>
+            <option value="">--Select Candidate--</option>
+            <option value="Candidate 1">Candidate 1</option>
+            <option value="Candidate 1">Candidate 2</option>
+            <option value="Candidate 1">Candidate 3</option>
+            <option value="Candidate 1">Candidate 4</option>
+            <option value="Candidate 1">Candidate 5</option>
+        </select><br><br>
+<label for="Governor">Governor:</label>
+        <select id="Governor" name="Governor" required>
+            <option value="">--Select Candidate--</option>
+            <option value="Candidate 1">Candidate 1</option>
+            <option value="Candidate 1">Candidate 2</option>
+            <option value="Candidate 1">Candidate 3</option>
+            <option value="Candidate 1">Candidate 4</option>
+            <option value="Candidate 1">Candidate 5</option>
+        </select><br><br>               
+<label for="Congressman/Congresswoman">Congressman/Congresswoman:</label>
+        <select id="Congressman/Congresswoman" name="Congressman/Congresswoman" required>
+            <option value="">--Select Candidate--</option>
+            <option value="Candidate 1">Candidate 1</option>
+            <option value="Candidate 1">Candidate 2</option>
+            <option value="Candidate 1">Candidate 3</option>
+            <option value="Candidate 1">Candidate 4</option>
+            <option value="Candidate 1">Candidate 5</option>
+        </select><br><br>       
+<label for="Senator">Senator:</label>
+        <select id="Senator" name="Senator" required>
+            <option value="">--Select Candidate--</option>
+            <option value="Candidate 1">Candidate 1</option>
+            <option value="Candidate 1">Candidate 2</option>
+            <option value="Candidate 1">Candidate 3</option>
+            <option value="Candidate 1">Candidate 4</option>
+            <option value="Candidate 1">Candidate 5</option>
+        </select><br><br>                      
+<label for="Councillor">Councillor:</label>
+        <select id="Councillor" name="Councillor" required>
+            <option value="">--Select Candidate--</option>
+            <option value="Candidate 1">Candidate 1</option>
+            <option value="Candidate 1">Candidate 2</option>
+            <option value="Candidate 1">Candidate 3</option>
+            <option value="Candidate 1">Candidate 4</option>
+            <option value="Candidate 1">Candidate 5</option>
+        </select><br><br>            
+<label for="Mayor">Mayor:</label>
+        <select id="MayorMayor" name="Mayor" required>
+            <option value="">--Select Candidate--</option>
+            <option value="Candidate 1">Candidate 1</option>
+            <option value="Candidate 1">Candidate 2</option>
+            <option value="Candidate 1">Candidate 3</option>
+            <option value="Candidate 1">Candidate 4</option>
+            <option value="Candidate 1">Candidate 5</option>
+        </select><br><br>   
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+ <script>
+        function registerVote(event) {
+            event.preventDefault();
+            
+            var fullName = document.getElementById('fullName').value;
+
+            alert('Thank you, ' + fullName + '! Your vote has been registered.');
+        }
+    </script>
+  
+</body>

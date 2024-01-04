@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<TItle>Home Page</TItle>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://scontent.fmnl30-2.fna.fbcdn.net/v/t1.15752-9/410305652_221852110958848_3004072662646912068_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeEK_Wq-65MhRA7YlXST2zPInVpJXNzQwWWdWklc3NDBZYwxYBZjbClqYFrCBUM6o3wpHpn_MYSzhCFQ3OyBgsIk&_nc_ohc=29HCaWLkrxkAX-1cYOX&_nc_ht=scontent.fmnl30-2.fna&oh=03_AdTl2Mv4tXEdMBFjJ0Q-vn6fU8A-BRKLNnIPqOVhsR65Tg&oe=65A7D6D0');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            text-align: right;
+            
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            
+            transition: color 0.3s;
+            font-size: 15px;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: rgba(255, 255, 255, 0.7); 
+        }
+
+        nav a:hover::after {
+            content: '';
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.7); 
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: white;
+            position: relative;
+        }
+
+        h2 {
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        p {
+            color: white;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            
+            margin-top: 50px;
+           
+        }
+
+        .image-container img {
+            width: 45%;
+        
+            border-radius: 8px;
+           
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1);
+           
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>YOUR VOICE CAN BE HEARD THROUGH YOUR VOTE</h1>
+    </header>
+
+    <nav>
+        <a href="about.html">About us</a>
+        <a href="voting.html">Voting Management System</a>
+    </nav>
+
+    <div class="container">
+        <h2>Your Vote Matters</h2>
+        <p>Your vote is not just a right, but a powerful tool that empowers you to have a say in the decisions that
+            impact your life and the lives of others. By using it wisely, you can help shape a future that aligns with
+            your values, aspirations, and vision for a better society. Don't underestimate the impact of your vote - it
+            has the potential to shape policies, determine the direction of governance, and bring about positive change.
+            So, research, reflect, and make an informed choice. Let your voice be heard through the act of voting and
+            become a driving force for progress and a brighter tomorrow.</p>
+    </div>
+
+    <!-- Image with box container -->
+    <div class="image-container">
+        <img src="https://bosesnijuan05.files.wordpress.com/2013/03/philippine-flag.jpg" alt="Vote in the Philippines">
+        <img src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t1.15752-9/411163624_3504462109793171_7826833717318053665_n.png?_nc_cat=111&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeEvlA6goBELzAHBgU6Hr8u6EXADsZOgIHQRcAOxk6AgdDNPBPA3TsV7Dse-81NFTwklEeNPOvbwa99_2DYYhbN0&_nc_ohc=pqCVERiebMEAX-y9rcd&_nc_ht=scontent.fmnl30-2.fna&oh=03_AdSMnWA66wrhCyKAy1e8a2rMt5aDyAQIb0J3hBu921-x2g&oe=65A832D4"
+            alt="Vote in the Philippines">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+          body {
+            background-color:white;
+            color:black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+           
+        }
+
+
+
+        h1 {
+            text-align: center;
+            color:white;
+            background-color:#333;
+            padding: 15px;
+        }
+
+      
+        
+        #form {
+         
+            width: 40%;
+            border: 1px solid black ; 
+            padding: 20px;
+            border-radius: 5px;
+           
+           
+        }
+
+      
+        #loginForm {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="form">
+       
+        <form id="loginForm" onsubmit="loginUser(event)" action="home.html">
+            <legend>
+                <h1>Login to website</h1>
+            </legend>
+
+            <label>Username:</label>
+            <input type="text" name="username" id="username" placeholder="Enter Your Username" required><br><br>
+
+            <label>Password:</label>
+            <input type="password" name="password" id="password" placeholder="Enter Your Password" required><br><br>
+
+            <input type="submit" value="Login">
+        </form>
+
+      
+
+    </div>
+
+    <script>
+        function loginUser(event) {
+            event.preventDefault();
+
+            var username = document.getElementById('username').value;
+
+            alert('Welcome, ' + username + '! You are now logged in.');
+
+          
+            window.location.href = event.target.action;
+        }
+
+       
+
+    </script>
+
+</body>
+
+</html>
